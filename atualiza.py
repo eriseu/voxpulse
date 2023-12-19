@@ -44,7 +44,7 @@ for i in range(num_posts):
     print(description)
     # Obtém a imagem do endereço da notícia no WordPress
     #image_url = get_image_from_wordpress(link)
-    imagem_url = 'https://n.centraleti.com.br/wp-content/uploads/2023/12/233914878-930x620.webp'
+    image_url = 'https://n.centraleti.com.br/wp-content/uploads/2023/12/233914878-930x620.webp'
     print("Imagem")
     print(image_url)
     # Verifica se a imagem foi encontrada
