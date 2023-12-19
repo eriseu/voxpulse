@@ -16,7 +16,7 @@ def get_image_from_wordpress(url):
 # Função para publicar uma imagem no Instagram
 def post_to_instagram(image_url, caption):
     bot = Bot()
-    bot.login(username=${{ secrets.LOGIN_INSTAGRAM }}, password=${{ secrets.SENHA_INSTAGRAM }})
+    bot.login(username='${{ secrets.LOGIN_INSTAGRAM }}', password='${{ secrets.SENHA_INSTAGRAM }}')
     bot.upload_photo(image_url, caption=caption)
     print("Fez login no IG")
     
