@@ -24,7 +24,8 @@ rss_url = 'https://n.centraleti.com.br/feed'
 
 # Faz o parse do feed RSS
 feed = feedparser.parse(rss_url)
-
+print("Iniciou")
+print(feed)
 # Lê as últimas postagens do feed
 num_posts = 3  # Número de postagens que você deseja publicar
 for i in range(num_posts):
@@ -34,13 +35,20 @@ for i in range(num_posts):
     title = entry.title
     link = entry.link
     description = entry.description
-    
+    print("Titulo")
+    print(title)
+    print("Link")
+    print(link)
+    print("Descrição")
+    print(description)
     # Obtém a imagem do endereço da notícia no WordPress
     image_url = get_image_from_wordpress(link)
-
+    print("Imagem")
+    print(image_url)
     # Verifica se a imagem foi encontrada
     if image_url:
         # Aqui você pode adicionar lógica adicional para processar os dados da postagem
         
         # Exemplo: publica o título, link e imagem no Instagram
         post_to_instagram(image_url=image_url, caption=f'{title}\n{link}')
+        print("Finalizou")
