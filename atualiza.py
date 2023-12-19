@@ -16,7 +16,7 @@ def get_image_from_wordpress(url):
 # Função para publicar uma imagem no Instagram
 def post_to_instagram(image_url, caption):
     bot = Bot()
-    bot.login(username='voxpulse8', password='!Xyrpk1977')
+    bot.login(username='${{ secrets.LOGIN_INSTAGRAM }}', password='${{ secrets.SENHA_INSTAGRAM }}')
     bot.upload_photo(image_url, caption=caption)
     print("Fez login no IG")
     
@@ -43,7 +43,8 @@ for i in range(num_posts):
     print("Descrição")
     print(description)
     # Obtém a imagem do endereço da notícia no WordPress
-    image_url = get_image_from_wordpress(link)
+    #image_url = get_image_from_wordpress(link)
+    imagem_url = 'https://n.centraleti.com.br/wp-content/uploads/2023/12/233914878-930x620.webp'
     print("Imagem")
     print(image_url)
     # Verifica se a imagem foi encontrada
@@ -51,5 +52,5 @@ for i in range(num_posts):
         # Aqui você pode adicionar lógica adicional para processar os dados da postagem
         
         # Exemplo: publica o título, link e imagem no Instagram
-    post_to_instagram(imagem_url=image_url, caption=f'{title}\n{link}')
-    print("Finalizou")
+        post_to_instagram(imagem_url=image_url, caption=f'{title}\n{link}')
+        print("Finalizou")
