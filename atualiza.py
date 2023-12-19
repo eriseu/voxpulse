@@ -16,16 +16,17 @@ def get_image_from_wordpress(url):
 # Função para publicar uma imagem no Instagram
 def post_to_instagram(image_url, caption):
     bot = Bot()
-    bot.login(username='${{ secrets.LOGIN_INSTAGRAM }}', password='${{ secrets.SENHA_INSTAGRAM }}')
+    bot.login(username=${{ secrets.LOGIN_INSTAGRAM }}, password=${{ secrets.SENHA_INSTAGRAM }})
     bot.upload_photo(image_url, caption=caption)
-
+    print("Fez login no IG")
+    
 # URL do feed RSS
 rss_url = 'https://n.centraleti.com.br/feed'
 
 # Faz o parse do feed RSS
 feed = feedparser.parse(rss_url)
 print("Iniciou")
-print(feed)
+
 # Lê as últimas postagens do feed
 num_posts = 3  # Número de postagens que você deseja publicar
 for i in range(num_posts):
