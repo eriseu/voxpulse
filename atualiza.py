@@ -1,4 +1,5 @@
 import requests
+import feedparser
 from bs4 import BeautifulSoup
 from instabot import Bot
 
