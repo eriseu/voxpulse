@@ -52,5 +52,5 @@ for i in range(num_posts):
         # Aqui você pode adicionar lógica adicional para processar os dados da postagem
         
         # Exemplo: publica o título, link e imagem no Instagram
-        post_to_instagram(imagem_url=image_url, caption=f'{title}\n{link}')
+        post_to_instagram(image_url=image_url, caption=f'{title}\n{link}')
         print("Finalizou")
